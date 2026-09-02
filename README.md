@@ -1,4 +1,4 @@
-<i>This project has been created as part of the 42 curriculum by <your-42-login>.</i>
+<i>This project has been created as part of the 42 curriculum by tel-atou.</i>
 
 # Fly-in
 
