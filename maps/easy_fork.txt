@@ -1,0 +1,14 @@
+# Easy: fork into two branches that merge again, four drones share the load.
+nb_drones: 4
+
+start_hub: hq 0 0 [color=green]
+hub: north 2 1 [color=blue]
+hub: south 2 -1 [color=blue]
+hub: junction 4 0 [color=magenta max_drones=2]
+end_hub: pad 6 0 [color=yellow]
+
+connection: hq-north
+connection: hq-south
+connection: north-junction
+connection: south-junction
+connection: junction-pad

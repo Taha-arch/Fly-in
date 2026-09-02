@@ -1,0 +1,11 @@
+# Easy: a short straight corridor, two drones flying one behind the other.
+nb_drones: 2
+
+start_hub: base 0 0 [color=green]
+hub: gate 2 0 [color=blue]
+hub: relay 4 0 [zone=priority color=cyan]
+end_hub: dock 6 0 [color=yellow]
+
+connection: base-gate
+connection: gate-relay
+connection: relay-dock

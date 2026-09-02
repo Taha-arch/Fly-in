@@ -1,0 +1,17 @@
+# Medium: a priority shortcut next to a slower restricted detour, plus
+# a narrow two-drone bottleneck before the goal.
+nb_drones: 5
+
+start_hub: launch 0 0 [color=green max_drones=5]
+hub: fastlane 2 0 [zone=priority color=cyan]
+hub: sidepath 2 2 [color=blue]
+hub: danger 4 2 [zone=restricted color=red]
+hub: hub_mid 4 0 [color=blue max_drones=2]
+end_hub: target 6 0 [color=yellow]
+
+connection: launch-fastlane
+connection: launch-sidepath
+connection: fastlane-hub_mid
+connection: sidepath-danger
+connection: danger-hub_mid
+connection: hub_mid-target

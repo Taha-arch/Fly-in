@@ -1,0 +1,29 @@
+# Hard: a small maze with a dead end, a narrow bottleneck and a
+# restricted shortcut, eight drones splitting across three routes.
+nb_drones: 8
+
+start_hub: origin 0 0 [color=green max_drones=8]
+hub: a1 1 1 [color=blue]
+hub: a2 2 1 [color=blue]
+hub: b1 1 -1 [color=blue]
+hub: b2 2 -1 [color=blue]
+hub: trap 1 0 [color=red]
+hub: shortcut 3 0 [zone=restricted color=orange]
+hub: bottleneck 4 0 [color=yellow max_drones=2]
+hub: relay1 5 1 [zone=priority color=cyan]
+hub: relay2 5 -1 [zone=priority color=cyan]
+end_hub: goal 6 0 [color=yellow max_drones=8]
+
+connection: origin-a1
+connection: origin-b1
+connection: origin-trap
+connection: a1-a2
+connection: b1-b2
+connection: a2-bottleneck
+connection: b2-bottleneck
+connection: origin-shortcut [max_link_capacity=2]
+connection: shortcut-bottleneck
+connection: bottleneck-relay1
+connection: bottleneck-relay2
+connection: relay1-goal
+connection: relay2-goal
